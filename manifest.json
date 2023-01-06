@@ -1,0 +1,24 @@
+{
+    "name": "Twitter Tool",
+    "version": "0.0.1",
+    "description": "Simple tool for twitter",
+    "manifest_version": 3,
+    "author": "Dice Acosta",
+    "options_page": "index.html",
+    "action": {},
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage"
+      ],
+    "content_scripts": [
+    {
+        "js": ["jquery-3.6.3.min.js","scripts/rounded.js","scripts/disableTwitterBlue.js"],
+        "run_at": "document_end",
+        "matches": [
+        "*://twitter.com/*"
+        ]
+    }
+    ]
+}
