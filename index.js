@@ -1,22 +1,25 @@
 const savedNames = ["roundedBrands","twitterblueButton"];
 
+window.onload = function() {
 
 function setAll() {
-    for (var i = 0; i < savedNames.length; i++) {
-        get(savedNames[i], function(result) {
-            document.getElementById(savedNames[i]).checked = result;
+    savedNames.forEach(currentName => {
+        get(currentName, function(result) {
+            var element = document.getElementById(currentName);
+            element.checked = result;
         });
-    }
+    });
 }
 
 setAll();
 
-for (var i = 0; i < savedNames.length; i++) {
-    var element = document.getElementById(savedNames[i]);
+
+savedNames.forEach(currentName => {
+    var element = document.getElementById(currentName);
     element.addEventListener('change', function() {
-        set(savedNames[i], element.checked);
+        set(currentName, element.checked);
     });
-}
+});
 
 
 function set(name, value) {
@@ -68,4 +71,6 @@ for (var i = 0; i < list.length; i++){
             element.style.display = "none";
         }
     });
+}
+
 }
