@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" width="75" height="75"/>
+  <img src="https://github.com/DiceRandom/TwitterTool/blob/main/img/icon.png" width="75" height="75"/>
 </p>
 
 <h1 align="center">Twitter Tool</h1>
