@@ -1,4 +1,5 @@
 
+
 <style>
     .content-wrapper {
         display: flex;
@@ -50,6 +51,7 @@
 
 <head>
     <title>Twitter Tool Options</title>
+    <icon href="img/icon.png" type="image/png">
 </head>
 
 <div class="content-wrapper">
@@ -66,7 +68,7 @@
                 <a class="reveal-question" id="brandReveal"> ? </a>
             </div>
             <div style="display: flex;" id="brandRevealImage">
-                <img class="reveal-image" src="img/roundedbrandsB.png" alt="Before Picture">
+                <img class="reveal-image" src="img/roundedbrandsB.png" alt="Before Picture" onclick="makeImageBigger()">
                 <img class="reveal-image" src="img/roundedbrandsA.png" alt="After Picture">
             </div>
         </div>
@@ -80,6 +82,18 @@
             <div style="display: flex;" id="twitterBlueImage">
                 <img class="reveal-image" src="img/twitterblueB.png" alt="Before Picture">
                 <img class="reveal-image" src="img/twitterblueA.png" alt="After Picture">
+            </div>
+        </div>
+        
+        <div class="box">
+            <div style="display: flex; justify-content: center;">
+                <input type="checkbox" id="disableviews" name="disable-view" onload="setRoundedBrands()" value="disableviews">
+                <label for="disableViews">Disable Views on tweets</label><br>
+                <a class="reveal-question" id="disableViews"> ? </a>
+            </div>
+            <div style="display: flex;" id="disableViewsImage">
+                <img class="reveal-image" src="img/disableviewsB.png" alt="Before Picture">
+                <img class="reveal-image" src="img/disableviewsA.png" alt="After Picture">
             </div>
         </div>
         

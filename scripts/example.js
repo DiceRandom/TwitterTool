@@ -18,6 +18,8 @@ window.onload = function() {
     function set(){
         if(enabled == true) {
             const timer = setInterval(() => {
+                // code down here
+                
                 // Find the element
                 clearTimeout(timer);
                 // Work with the element

@@ -6,6 +6,12 @@
     "author": "Dice Acosta",
     "options_page": "index.html",
     "action": {},
+    "icons": {
+        "16":   "img/icons/icon16.png",
+        "32":   "img/icons/icon32.png",
+        "48":   "img/icons/icon48.png",
+        "128":  "img/icons/icon128.png"
+    },
     "minimum_chrome_version": "93",
     "background": {
         "service_worker": "background.js",
@@ -16,7 +22,12 @@
       ],
     "content_scripts": [
     {
-        "js": ["jquery-3.6.3.min.js","scripts/rounded.js","scripts/disableTwitterBlue.js"],
+        "js": [
+            "jquery-3.6.3.min.js",
+            "scripts/rounded.js",
+            "scripts/disableTwitterBlue.js",
+            "scripts/disableViews.js"
+        ],
         "run_at": "document_end",
         "matches": [
         "*://twitter.com/*"

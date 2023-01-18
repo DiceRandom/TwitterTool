@@ -1,10 +1,11 @@
-const savedNames = ["roundedBrands","twitterblueButton"];
+const savedNames = ["roundedBrands","twitterblueButton","disableviews"];
 
 window.onload = function() {
 
 function setAll() {
     savedNames.forEach(currentName => {
         get(currentName, function(result) {
+            console.log("Start Setting "+currentName+" to "+result);
             var element = document.getElementById(currentName);
             element.checked = result;
         });
@@ -42,7 +43,7 @@ function get(name,_callback) {
 // Populate Question List
 
 
-var list = ["brandReveal","twitterBlue"];
+var list = ["brandReveal","twitterBlue","disableViews"];
 
 init();
 

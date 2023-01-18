@@ -12,7 +12,6 @@ window.onload = function() {
     function get(_callback) {
         chrome.storage.sync.get(['twitterblueButton'], function(result) {
             enabled = result.twitterblueButton;
-            console.log(enabled);
             _callback();
         });
     }
@@ -30,7 +29,6 @@ window.onload = function() {
                     clearTimeout(timer);
                     for (var i = 0; i < as.length; i++) {
                         if(as[i].href == "https://twitter.com/i/twitter_blue_sign_up"){
-                            console.log("Remove Twitter Blue is Enabled!");
                             as[i].style.display = 'none';
                         }
                     }
