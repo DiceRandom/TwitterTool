@@ -15,3 +15,12 @@
 
 **Notes**
 * Only Supported on Chrome/Edge
+
+
+**Todo**
+* Remove Gold checks
+* Support Firefox
+* Add native video downloading support [Similar](https://github.com/mstfsnc/twitter-video-downloader-extension)
+* Add image button support [Similar](https://chrome.google.com/webstore/detail/twitter-image-downloader/ljfafhkjifmbnflpbpeoepeponlkodel/reviews?hl=en)
+* Create a build script for firefox and chrome
+* Support Safari (Big stretch)
