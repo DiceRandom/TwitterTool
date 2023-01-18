@@ -1,111 +1,45 @@
 
 
-<style>
-    .content-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-    }
-
-    .title{
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 0;
-        padding: 0;
-    }
-
-    .footer{
-        font-size: 1rem;
-        font-weight: 700;
-        margin: 0;
-        padding: 0;
-        margin-top: auto;
-    }
-
-    .reveal-question{
-        display: inline;
-        font-weight: bold;
-        padding-left: 10;
-        cursor: pointer;
-    }
-
-    #brands{
-        display: inline;
-    }
-
-    .box{
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 1vh;
-    }
-
-    .reveal-image{
-        display: block;
-        width: 200px;
-        padding: 5px;
-    }
-</style>
-
-
 <head>
     <title>Twitter Tool Options</title>
     <icon href="img/icon.png" type="image/png">
-</head>
 
-<div class="content-wrapper">
-    <p class="title">
-        twitter tool
-    </p>
-    
-    <h2> Display </h2>
-    <div class="boxs">
-        <div class="box">
-            <div style="display: flex; justify-content: center;">
-                <input type="checkbox" id="roundedBrands" name="rounded-brand" onload="setRoundedBrands()" value="rounded-brands">
-                <label for="brands">Rounded Brands</label><br>
-                <a class="reveal-question" id="brandReveal"> ? </a>
-            </div>
-            <div style="display: flex;" id="brandRevealImage">
-                <img class="reveal-image" src="img/roundedbrandsB.png" alt="Before Picture" onclick="makeImageBigger()">
-                <img class="reveal-image" src="img/roundedbrandsA.png" alt="After Picture">
-            </div>
-        </div>
-        
-        <div class="box">
-            <div style="display: flex; justify-content: center;">
-                <input type="checkbox" id="twitterblueButton" name="twitter-blue" onload="setRoundedBrands()" value="twitter-blue">
-                <label for="twitterblueButton">Twitter Blue Sidebar</label><br>
-                <a class="reveal-question" id="twitterBlue"> ? </a>
-            </div>
-            <div style="display: flex;" id="twitterBlueImage">
-                <img class="reveal-image" src="img/twitterblueB.png" alt="Before Picture">
-                <img class="reveal-image" src="img/twitterblueA.png" alt="After Picture">
-            </div>
-        </div>
-        
-        <div class="box">
-            <div style="display: flex; justify-content: center;">
-                <input type="checkbox" id="disableviews" name="disable-view" onload="setRoundedBrands()" value="disableviews">
-                <label for="disableViews">Disable Views on tweets</label><br>
-                <a class="reveal-question" id="disableViews"> ? </a>
-            </div>
-            <div style="display: flex;" id="disableViewsImage">
-                <img class="reveal-image" src="img/disableviewsB.png" alt="Before Picture">
-                <img class="reveal-image" src="img/disableviewsA.png" alt="After Picture">
-            </div>
-        </div>
-        
-<script src="./scripts/index.js"></script>
+    <!-- import css -->
+    <link rel="stylesheet" href="./styles/switch.css">
+    <link rel="stylesheet" href="./styles/lightbox.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <!-- load jquery -->
+    <script src="jquery-3.6.3.min.js"></script>
+</head>
+<div class="container">
+    <div class="sidebar-container">
+
     </div>
 
-
-    <p class="footer">  
-        dice
-    </p>
-
+    <div class="content-container">
+        <div class="class-row">
+            
+                <div class="button-container">
+                    <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+                </div>
+                <div class="row-container">
+                    <p class="title"> Disable Twitter Views </p>
+                    <p class="cat"> Display </p>
+                    <p class="description"> Disables the Twitter Views under the tweet</p>
+                </div>
+                <div class="image-container">
+                    <a class="lightbox" href="#">
+                        <image src="img/disableviewsA.png" style="padding-bottom: 10px;" height="100%"> 
+                    </a>
+                    
+                    <a class="lightbox" href="#">
+                        <img src="img/roundedbrandsA.png" style="height:100%"/>
+                    </a>
+                </div> 
+        </div>
+    </div>
 </div>
 
 
-<script src="./scripts/registerservice.js"></script>
+<script src="./scripts/index.js"></script>
