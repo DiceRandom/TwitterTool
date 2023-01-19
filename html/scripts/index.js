@@ -28,7 +28,17 @@ var info = {
             "imagetitle": "disableviews",
             "image2": "img/disableviewsA.png",
             "image": "img/disableviewsB.png"
+        },
+        {
+            "title": "Flip Twitter Views",
+            "cat": "Quality of Life",
+            "description": "Pre Jan 2023 - Flips the views button under tweets to help with muscle memory.",
+            "storage-name":"disableviews",
+            "imagetitle": "disableviews",
+            "image2": "img/disableviewsA.png",
+            "image": "img/disableviewsB.png"
         }
+        
     ]
 };
 
@@ -38,10 +48,16 @@ var classRow = document.getElementsByClassName("class-row")[0];
 
 var numplugins = info.data.length;
 
+var cats = [];
+for (var i = 0; i < info.data.length; i++) {
+    if(!cats.includes(info.data[i].cat)){
+        cats.push(info.data[i].cat);
+    }
+}
+
 for (var i = 0; i < numplugins; i++) {
     if(i != 0){
         var newRow = classRow.cloneNode(true);
-        document.getElementsByClassName("content-container")[0].appendChild(newRow);
     }else{
         // first row
         var newRow = classRow;
@@ -51,6 +67,7 @@ for (var i = 0; i < numplugins; i++) {
 
     function get(point,row){
         const img = new Image();
+        // check if images should be stacked or next to each other
         img.onload = function() {
 
             var stack = true;
@@ -74,6 +91,7 @@ for (var i = 0; i < numplugins; i++) {
 
         console.log(pointe);
 
+        // fill out variables
         var buttonContainer = currentRow.children[0];
         var rowContainer = currentRow.children[1];
         var imageContainer = currentRow.children[2];
@@ -95,6 +113,54 @@ for (var i = 0; i < numplugins; i++) {
         description.innerHTML = info.data[pointe].description;
         image.src = info.data[pointe].image;
         image2.src = info.data[pointe].image2;
+
+
+        
+        // CAT GENERATION
+
+        var currentCat;
+
+        if(document.getElementById(info.data[pointe].cat) == null){
+            currentCat = document.createElement("div");
+            // <div class="cat-container" id="display"></div>
+            currentCat.className = "cat-container";
+            currentCat.id = info.data[pointe].cat;
+
+            var catTitle = document.createElement("h2");
+            catTitle.innerHTML = info.data[pointe].cat;
+            currentCat.appendChild(catTitle);
+
+            document.getElementsByClassName("content-container")[0].appendChild(currentCat);
+        
+            currentCat.appendChild(currentRow);
+        }else{
+            currentCat = document.getElementById(info.data[pointe].cat);
+            currentCat.appendChild(currentRow);
+        }
+
+        // Sidebar Generation
+        // get all cats in data
+        
+
+        // loop throught cats
+        
+        var sidebarContainer = document.getElementsByClassName("sidebar-container")[0];
+        if(sidebarContainer.children.length == 0){
+            // <h1>categories</h1>
+            var sidebarTitle = document.createElement("h1");
+            sidebarTitle.innerHTML = "categories";
+            sidebarContainer.appendChild(sidebarTitle);
+            console.log(cat);
+            for (var i = 0; i < cats.length; i++) {
+                // create sidebar item
+                console.log(cats[i]);
+                var sidebarItem = document.createElement("a");
+                sidebarItem.className = "sidebar-item";
+                sidebarItem.href = "#" + cats[i];
+                sidebarItem.innerHTML = cats[i];
+                sidebarContainer.appendChild(sidebarItem);
+            }
+        }
 
         // add storage name to array
         storageNames.push(info.data[pointe]["storage-name"]);
