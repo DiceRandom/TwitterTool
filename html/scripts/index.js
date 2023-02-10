@@ -30,6 +30,16 @@ var info = {
             "image": "img/disableviewsB.png"
         },
         {
+            "title": "Disable Gold Checkmarks",
+            "cat": "Display",
+            "description": "Removes gold checkmarks from business accounts.",
+            "storage-name":"disablegold",
+            "imagetitle": "disablegold",
+            "image2": "img/disableGoldA.png",
+            "image": "img/disableGoldB.png"
+        },
+        
+        {
             "title": "Flip Twitter Views",
             "cat": "Quality of Life",
             "description": "Pre Jan 2023 - Flips the views button under tweets to help with muscle memory.",
@@ -37,7 +47,8 @@ var info = {
             "imagetitle": "disableviews",
             "image2": "img/disableviewsA.png",
             "image": "img/disableviewsB.png"
-        }
+        },
+        
         
     ]
 };

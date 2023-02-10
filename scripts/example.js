@@ -1,29 +1,34 @@
-// Example script to show off the API
+// Example script to the scripts
+// This example is used to show off how to use the scroll function
+
+// This example is based off the disableTwitterBlue
 
 
-const name = "twitterblueButton"; // Name of variable in storage
-const prettyName = "Disable Twitter Blue" // Name of script
+
 var enabled = false;
+var alwayTrue = false;
 
-console.log(prettyName + " is running...");
-window.onload = function() {
+console.log("Example Script " + " is running...");
+window.addEventListener("load", function (){
+    get(set);
 
     function get(_callback) {
-        chrome.storage.sync.get([name], function(result) {
-            enabled = result[name];
+        if(alwayTrue != true){            
+            chrome.storage.sync.get(["STORAGENAME"], function(result) {
+                enabled = result.STORAGENAME;
+                _callback();
+            });
+        }else{
             _callback();
-        });
+        }
     }
-
     function set(){
         if(enabled == true) {
             const timer = setInterval(() => {
-                // code down here
-                
-                // Find the element
-                clearTimeout(timer);
-                // Work with the element
+                // This is where you put your code
+                // When looking for elements, use document.getElementsByTagName("");
             }, 150);
         }
     }
-}
+});
+

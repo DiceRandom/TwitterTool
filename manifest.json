@@ -26,7 +26,8 @@
             "/html/scripts/jquery-3.6.3.min.js",
             "scripts/rounded.js",
             "scripts/disableTwitterBlue.js",
-            "scripts/disableViews.js"
+            "scripts/disableViews.js",
+            "scripts/disableGoldCheck.js"
         ],
         "run_at": "document_end",
         "matches": [

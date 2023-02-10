@@ -1,5 +1,6 @@
 
-    a.lightbox img {
+    a.lightbox {
+        cursor: zoom-in;
     }
 
     /* Styles the lightbox, removes it from sight and adds the fade-in transition */
@@ -117,4 +118,5 @@
         height: 100%;
         /* align-self: center; */
         left: 0;
+        cursor: zoom-out;
     }

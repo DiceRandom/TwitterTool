@@ -1,6 +1,9 @@
+@import url('./fonts/fonts.css');
+
 body{
     margin: 0;
     padding: 0;
+    font-family: "ShinGo";
 }
 
 
@@ -106,7 +109,7 @@ html{
 }
 
 .description{
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: normal;
     margin-top: 12px;
 }
