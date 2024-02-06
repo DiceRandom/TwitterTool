@@ -8,10 +8,9 @@
 
 ### Installation Instructions
 **Google Chrome / Microsoft Edge** (Custom sites supported)
-1. ~~Download this repo as a [ZIP file from GitHub]().~~ not yet
-1. Unzip the file and you should have a folder named `twitter-tool-chrome-master`.
+1. Download the newest production [release](https://github.com/DiceRandom/TwitterTool/releases/tag/prod).
 1. In Chrome/Edge go to the extensions page (`chrome://extensions` or `edge://extensions`).
-1. Drag the `twitter-tool-chrome-master` folder anywhere on the page to import it (do not delete the folder afterwards).
+1. Drag the `TwitterTool.crx` file anywhere on the page to import it.
 
 **Notes**
 * Only Supported on Chrome/Edge
