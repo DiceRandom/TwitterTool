@@ -4,6 +4,7 @@ var enabled = false;
 
 console.log("Rounded Brands" + " is running...");
 window.addEventListener("load", function (){
+    
     window.addEventListener("scroll", (event) => {
         get(set);
         function get(_callback) {
@@ -46,6 +47,7 @@ window.addEventListener("load", function (){
 
     function set(){
         if(enabled){
+            console.log("Rounded Brands" + " is enabled");
             var divs = document.getElementsByTagName("div")
             for (let i = 0; i < divs.length; i++) {
                 if(divs[i].style.clipPath != null && divs[i].style.clipPath != ""){

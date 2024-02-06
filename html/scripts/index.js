@@ -12,10 +12,10 @@ var info = {
             "image": "img/roundedbrandsB.png"
         }, 
         {
-            "title": "Twitter Blue Sidebar",
+            "title": "Twitter Premium Sidebar",
             "cat": "Display",
             "description": "Remove the button on the sidebar reminding you to spend money.",
-            "storage-name":"twitterblueButton",
+            "storage-name":"disableTwitterPremium",
             "imagetitle": "twitterblue",
             "image2": "img/twitterblueA.png",
             "image": "img/twitterblueB.png"    
@@ -39,15 +39,15 @@ var info = {
             "image": "img/disableGoldB.png"
         },
         
-        {
-            "title": "Flip Twitter Views",
-            "cat": "Quality of Life",
-            "description": "Pre Jan 2023 - Flips the views button under tweets to help with muscle memory.",
-            "storage-name":"disableviews",
-            "imagetitle": "disableviews",
-            "image2": "img/disableviewsA.png",
-            "image": "img/disableviewsB.png"
-        },
+        // {
+        //     "title": "Flip Twitter Views",
+        //     "cat": "Quality of Life",
+        //     "description": "Pre Jan 2023 - Flips the views button under tweets to help with muscle memory.",
+        //     "storage-name":"disableviews",
+        //     "imagetitle": "disableviews",
+        //     "image2": "img/disableviewsA.png",
+        //     "image": "img/disableviewsB.png"
+        // },
         
         
     ]

@@ -22,7 +22,9 @@ window.addEventListener("load", function (){
    
 
     function set(){
-       
+       if(enabled){
+        console.log("Disable Gold Checks" + " is enabled");
+       }
     }
 });
 

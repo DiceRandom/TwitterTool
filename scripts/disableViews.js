@@ -2,61 +2,42 @@
 // disable rounded brands
 
 var enabled = false;
-var alwayTrue = false;
 
 console.log("Disable Views" + " is running...");
-window.addEventListener("load", function (){
+window.onload = function() {
     get(set);
 
-    function get(_callback) {
-        if(alwayTrue != true){            
-            chrome.storage.sync.get(["disableviews"], function(result) {
-                enabled = result.disableviews;
-                _callback();
-            });
-        }else{
+    function get(_callback) {      
+        chrome.storage.sync.get(["disableviews"], function(result) {
+            enabled = result.disableviews;
+            console.log("Disable Views" + " is " + enabled);
             _callback();
-        }
+        });
+        
     }
 
    
 
     function set(){
         if(enabled == true) {
-            const timer = setInterval(() => {
-                var apple = document.getElementsByTagName("a");
-            }, 150);
+            console.log("Disable Views"  + " is enabled");
         }
     }
-});
+}
 
-window.onscroll = function() {
-    get(set);
-    function get(_callback) {
-        if(alwayTrue != true){            
-            chrome.storage.sync.get(["disableviews"], function(result) {
-                enabled = result.disableviews;
-                _callback();
-            });
-        }else{
-            _callback();
-        }
-    }
-
-
-
-    function set(){
+window.addEventListener("scroll", (event) => {
         if(enabled){
             var apple = document.getElementsByTagName("a");
             for (let i = 0; i < apple.length; i++) {
-                var label = apple[i].ariaLabel;
+                var label = apple[i].href;
                 if(label != null){
-                    if(endOfString(label, "View Tweet analytics")){
-                        apple[i].style.display = 'none';
+                    if(endOfString(label, "/analytics")){
+                        console.log("Found!");
+                        // delete node / this is dumb
+                        apple[i].parentNode.parentNode.removeChild(apple[i].parentElement);
                     }
                 }
             }
-            
             
             function endOfString(importStr,endStr){
                 // import = hello how are you
@@ -74,5 +55,4 @@ window.onscroll = function() {
                 }
             }
         }
-    }
-}
+});
