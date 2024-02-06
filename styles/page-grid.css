@@ -1,0 +1,51 @@
+.page-grid-body {
+    gap: 0 1rem;
+    grid:
+        "header side" auto
+        "inside side" auto
+        "content side" auto
+        "footer side" auto
+        / auto 16rem;
+    margin: 0 auto;
+    max-width: 57rem;
+    padding: 1rem 1rem 9rem 1rem;
+    position: relative;
+}
+
+.page-grid-header {
+    grid-area: header;
+}
+
+.page-grid-inside {
+    grid-area: inside;
+}
+
+.page-grid-content {
+    grid-area: content;
+}
+
+.page-grid-footer {
+    grid-area: footer;
+}
+
+.page-grid-side {
+    grid-area: side;
+    margin-top: 1.25rem;
+    position: fixed;
+    right: calc(50% - 28.5rem);
+    top: 0;
+    width: 16rem;
+}
+
+@media screen and (max-width: 57rem) {
+    .page-grid-body {
+        gap: 0 1rem;
+        max-width: 40rem;
+    }
+
+    .page-grid-side {
+        margin: 0 auto;
+        position: static;
+    }
+}
+

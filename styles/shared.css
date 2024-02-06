@@ -1,0 +1,98 @@
+:root {
+    --color-bg: #1a1a1a;
+    --color-hover: #479444;
+    --color-control: #61b45e;
+    --color-text: #61b45e;
+    --color-text-hover: white;
+    --color-highlight: #5e5e5e;
+    --color-honey: #5e5e5e;
+    --color-honey-text: #5e5e5e;
+    --font-family: 'Dela Gothic One', Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
+    color-scheme: dark;
+}
+
+html,
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    color: var(--color-highlight);
+    font-weight: 300;
+    text-align: center;
+}
+
+h6 {
+    font-weight: 400;
+}
+
+a {
+    color: var(--color-text);
+    outline: none;
+    transition: color 125ms;
+    word-break: break-word;
+}
+
+a:hover {
+    color: var(--color-text-hover);
+}
+
+li {
+    list-style-type: circle;
+}
+
+::-moz-selection {
+    background-color: var(--color-highlight);
+    color: var(--color-text-hover);
+}
+
+::selection {
+    background-color: var(--color-highlight);
+    color: var(--color-text-hover);
+}
+
+article img,
+figure img {
+    box-shadow: 0 0.25rem 2.5rem rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    max-width: 100%;
+}
+
+a:hover img {
+    filter: brightness(1.05);
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    text-align: center;
+}
+
+figcaption {
+    font-size: smaller;
+}
+
+video {
+    cursor: pointer;
+}
+
+.no-shadow {
+    box-shadow: unset;
+}
+
+.text-highlight {
+    color: var(--color-highlight);
+}
+
+blockquote {
+    background: #211921;
+    border-left: 0.25rem solid var(--color-highlight);
+    font-style: italic;
+    margin-left: 0;
+    padding-left: 2rem;
+}
