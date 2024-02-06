@@ -4,7 +4,7 @@
 
 <h1 align="center">Twitter Tool</h1>
 
-*A Twitter extension to fix all the Elon Musk Garbage*
+*A Twitter extension to fix recent twitter updates*
 
 ### Installation Instructions
 **Google Chrome / Microsoft Edge** (Custom sites supported)
