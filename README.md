@@ -24,12 +24,12 @@
 
 * **Remove square business profiles**
     * Removes the fact that businesses on twitter now have square icons, gross.
-   <img src="https://github.com/DiceRandom/TwitterTool/blob/main/img/roundedbrandsB.png" height="125"/>
-   <img src="https://github.com/DiceRandom/TwitterTool/blob/main/img/roundedbrandsA.png" height="125"/>
-* **Remove Twitter blue on sidebar**
+   <img src="https://github.com/DiceRandom/TwitterTool/blob/main/html/img/roundedbrandsB.png" height="125"/>
+   <img src="https://github.com/DiceRandom/TwitterTool/blob/main/html/img/roundedbrandsA.png" height="125"/>
+* **Remove Twitter Premium on sidebar**
     - Remove the button on the sidebar reminding you to spend money.
-  <img src="https://github.com/DiceRandom/TwitterTool/blob/main/img/twitterblueA.png" height="125"/>
-  <img src="https://github.com/DiceRandom/TwitterTool/blob/main/img/twitterblueB.png" height="125"/>
+  <img src="https://github.com/DiceRandom/TwitterTool/blob/main/html/img/twitterblueA.png" height="125"/>
+  <img src="https://github.com/DiceRandom/TwitterTool/blob/main/html/img/twitterblueB.png" height="125"/>
 * **Remove the view under tweets**
     - Remove the views button under tweets to help with muscle memory.
 * **Flip Views with likes under tweets**
